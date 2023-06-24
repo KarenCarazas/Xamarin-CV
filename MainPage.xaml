@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="formscv.MainPage"
+             Title="Formulario CV">
+
+    <StackLayout>
+        <Frame Padding="24" CornerRadius="0">
+            <Label Text="Curriculum Vitae Forms" HorizontalTextAlignment="Center" FontSize="Title" TextColor="Black"/>
+        </Frame>
+
+        <Frame Padding="12" CornerRadius="0" BackgroundColor="WhiteSmoke">
+            <Label Text="Datos personales" HorizontalTextAlignment="Center" FontSize="12"  TextColor="Black"/>
+        </Frame>
+
+        <ScrollView >
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10" WidthRequest="464">
+                <StackLayout>
+                    <Label Text="Nombres y Apellidos:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="Fill" />
+                    <Entry x:Name="NameEntry" Placeholder="Ingrese su nombre completo" Margin="0,0,0,10" />
+
+                    <Label Text="Fecha de nacimiento:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <DatePicker x:Name="DatePicker" />
+
+                    <Label Text="Teléfono:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Entry x:Name="PhoneEntry" Placeholder="Ingrese su número telefónico" />
+
+                    <Label Text="Correo electronico:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Entry x:Name="CorreoEntry" Placeholder="Ingrese su correo electrónico" />
+
+                    <Label Text="Nacionalidad:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Picker x:Name="NationPicker" Title="Seleccione su país de nacimiento">
+                        <Picker.Items>
+                            <x:String>Perú</x:String>
+                            <x:String>Chile</x:String>
+                            <x:String>Argentina</x:String>
+                            <x:String>Bolivia</x:String>
+                            <x:String>Colombia</x:String>
+                            <x:String>Brazil</x:String>
+                            <x:String>Venezuela</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+
+                </StackLayout>
+            </Frame>
+
+        </ScrollView>
+
+        <Frame Padding="12" CornerRadius="0" BackgroundColor="WhiteSmoke">
+            <Label Text="Datos profesionales" HorizontalTextAlignment="Center" FontSize="12"  TextColor="Black"/>
+        </Frame>
+        <ScrollView >
+            <Frame BorderColor="Gray" CornerRadius="5" Padding="10" WidthRequest="464">
+                <StackLayout>
+                    <Label Text="Ocupación:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2" HorizontalOptions="Fill" />
+                    <Entry x:Name="OcupationEntry" Placeholder="Ingrese su puesto de trabajo" />
+
+                    <Label Text="Perfil:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Entry x:Name="PerfilEntry" Placeholder="Describa brevemente su perfil laboral" />
+
+                    <Label Text="Nivel de ingles:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <RadioButton x:Name="BasicRadioButton" FontSize="15" Content="Básico" />
+                    <RadioButton x:Name="InterRadioButton" FontSize="15" Content="Intermedio" />
+                    <RadioButton x:Name="FluidRadioButton" FontSize="15" Content="Fluido" 
+                 IsChecked="true" />
+
+                    <Label Text="Lenguajes de programacion:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Picker x:Name="LengPicker" Title="Seleccione un lenguaje de programación">
+                        <Picker.Items>
+                            <x:String>Python</x:String>
+                            <x:String>C++</x:String>
+                            <x:String>Java</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+
+                    <Label Text="Aptitudes:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Picker x:Name="AptPicker" Title="Seleccione su aptitud destacable">
+                        <Picker.Items>
+                            <x:String>Inteligencia emocional</x:String>
+                            <x:String>Espíritu crítico</x:String>
+                            <x:String>Trabajo en equipo</x:String>
+                            <x:String>Capacidad analítica</x:String>
+                            <x:String>Habilidades físicas</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+
+                    <Label Text="Habilidades:" FontSize="15" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="2"
+             HorizontalOptions="Fill" />
+
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="AgilidadCheckBox" />
+                        <Label Text="Agilidad" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="CreatividadCheckBox" />
+                        <Label Text="Creatividad" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="IngenioCheckBox" />
+                        <Label Text="Ingenio" VerticalOptions="Center" />
+                    </StackLayout>
+
+
+
+
+
+                </StackLayout>
+            </Frame>
+
+        </ScrollView>
+        <Button Text="Enviar Datos" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" Clicked="EnviarButton_Clicked" />
+    </StackLayout>
+
+</ContentPage>
